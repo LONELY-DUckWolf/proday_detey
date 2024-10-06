@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Плавный скроллинг */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-size: 16px; /* Размер шрифта по умолчанию */
+}
+
+#promotions {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.promotion-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.promotion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px; /* Ширина карточек */
+    text-align: center;
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.promotion-card:hover {
+    transform: scale(1.05); /* Увеличиваем карточку при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличиваем тень для эффекта глубины */
+}
+
+.promotion-card img {
+    width: 50px;
+    height: 50px; /* Фиксированная высота для изображений */
+    object-fit: cover; /* Обрезаем изображение по центру */
+}
+
+.promotion-card h3 {
+    font-size: 20px; /* Размер шрифта заголовка акции */
+    color: #333;
+    margin: 15px 0;
+}
+
+.promotion-card p {
+    font-size: 16px; /* Размер шрифта для описания акции */
+    color: #666;
+    padding: 0 15px 15px; /* Отступы для текста */
+}
+
+.promoBtn {
+    background-color: #f0c040; /* Цвет кнопки */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Размер шрифта для кнопки */
+    margin-bottom: 15px; /* Отступ от кнопки до низа карточки */
+    transition: background-color 0.3s;
+}
+
+.promoBtn:hover {
+    background-color: #ffb700; /* Цвет кнопки при наведении */
+}
+
+
+#contact {
+    background: linear-gradient(to right, #e0e0e0, #ffffff);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    font-size: 24px; /* Размер шрифта для заголовка информации */
+    color: #333; /* Цвет заголовка */
+}
+
+.contact-info p {
+    font-size: 18px; /* Размер шрифта для текста информации */
+    color: #555; /* Цвет текста информации */
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Полная ширина формы */
+}
+
+form input, form textarea {
+    width: calc(100% - 20px); /* Уменьшаем ширину для учёта отступов */
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Размер шрифта для полей ввода */
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #f0c040; /* Цвет границы при фокусе */
+    outline: none; /* Убираем стандартное выделение */
+}
+
+form textarea {
+    height: 100px; /* Высота текстового поля */
+}
+
+button {
+    background-color: #f0c040; /* Цвет кнопки */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px; /* Размер шрифта для кнопки */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffb700; /* Цвет кнопки при наведении */
+}
+
+
+header {
+    background: linear-gradient(to right, #111, #444);
+    color: #fff;
+    padding: 15px 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo h1 {
+    display: inline;
+    margin: 0;
+    font-size: 24px; /* Размер шрифта заголовка */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #f0c040; /* Цвет ссылок */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 18px; /* Размер шрифта для навигации */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Цвет при наведении */
+}
+
+main {
+    padding-top: 100px; /* Отступ, чтобы учесть фиксированный хедер */
+}
+
+#slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+.slider-info {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+h2 {
+    color: #111;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 28px; /* Размер шрифта для заголовков секций */
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.car-card {
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+
+.car-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.car-card h3 {
+    font-size: 22px; /* Размер шрифта для названий автомобилей */
+    margin: 10px 0;
+}
+
+.car-card p {
+    font-size: 18px; /* Размер шрифта для описания автомобилей */
+}
+
+.buyBtn {
+    background-color: #f0c040; /* Цвет кнопки */
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Размер шрифта для кнопки */
+}
+
+.buyBtn:hover {
+    background-color: #ffb700; /* Цвет кнопки при наведении */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#reviews {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center; /* Центрируем текст */
+}
+
+.review-slider {
+    position: relative; /* Относительное позиционирование для контейнера слайдера */
+    overflow: hidden; /* Скрываем все, что выходит за пределы слайдера */
+    width: 100%; /* Ширина слайдера */
+    max-width: 1000px; /* Максимальная ширина слайдера */
+    margin: auto; /* Центрируем слайдер */
+}
+
+.review-container {
+    display: flex; /* Используем flexbox для горизонтального расположения карточек */
+    transition: transform 0.5s ease; /* Плавный переход при смене слайда */
+    width: calc(300px * 10 + 900px); /* Ширина контейнера равна количеству карточек * ширина карточки + расстояния между ними */
+}
+
+.review-card {
+    width: 300px; /* Ширина карточки */
+    height: 300px; /* Высота карточки */
+    margin-right: 100px; /* Расстояние между карточками */
+    background-color: #fff; /* Цвет фона карточек */
+    border-radius: 10px; /* Скругление углов карточек */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для карточек */
+    padding: 20px; /* Отступы внутри карточки */
+    display: flex; /* Flexbox для вертикального расположения контента */
+    flex-direction: column; /* Расположение по вертикали */
+    justify-content: center; /* Центрируем контент по вертикали */
+    align-items: center; /* Центрируем контент по горизонтали */
+}
+
+.review-card:last-child {
+    margin-right: 0; /* Убираем отступ справа у последней карточки */
+}
+
+.review-avatar {
+    width: 80px; /* Ширина аватара */
+    height: 80px; /* Высота аватара */
+    border-radius: 50%; /* Круглая форма аватара */
+    object-fit: cover; /* Обрезаем изображение по центру */
+    margin-bottom: 15px; /* Отступ между аватаром и текстом */
+}
+
+.review-card h3 {
+    font-size: 18px; /* Размер шрифта для имени клиента */
+    color: #333; /* Цвет текста имени */
+    margin: 10px 0; /* Отступы для имени */
+}
+
+.review-card p {
+    font-size: 16px; /* Размер шрифта для текста отзыва */
+    color: #666; /* Цвет текста отзыва */
+    text-align: center; /* Центрируем текст отзыва */
+}
+
+.modal {
+    display: none; /* Скрываем модалки по умолчанию */
+    position: fixed; /* Позиционируем модалки относительно окна */
+    z-index: 1000; /* Поверх остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Позволяем прокручивать содержимое, если необходимо */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Цвет фона модалки */
+    margin: 15% auto; /* Отступ сверху и авто по горизонтали */
+    padding: 20px; /* Отступы внутри модалки */
+    border: 1px solid #888; /* Рамка */
+    width: 80%; /* Ширина модалки */
+    max-width: 600px; /* Максимальная ширина модалки */
+    border-radius: 10px; /* Скругление углов */
+}
+
+.close {
+    color: #aaa; /* Цвет для кнопки закрытия */
+    float: right; /* Правое расположение */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Цвет при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer; /* Курсор в виде указателя */
+}
